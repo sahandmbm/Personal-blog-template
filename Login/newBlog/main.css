@@ -1,0 +1,20 @@
+
+.row {
+	text-align: center;
+    padding: 100px;
+}
+.btn{
+    background-color: lavenderblush;
+    height: 100px;
+}
+
+h1{
+    text-align: center;
+    padding: 100px;
+    background-color: lavender;
+}
+
+a {
+    color: lavender;
+    margin: 10px;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Personal blog</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="user-scalable = yes">
+    <meta name="description" content="DESCRIPTION">
+    <link rel="icon" href="../sahand.jpg">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="normalize.css">
+
+</head>
+<body>
+    
+    <form action="check.php" method="post" autocomplete="on">
+
+      <div class="container">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" id="uName" name="uname"  required>
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" id="pWord" name="psw" required>
+
+        <button type="submit" onclick="check()">Login</button>
+      </div>
+    </form>
+    <script>
+
+        
+        function check() {
+            // stored data from the register-form
+            var enteredName = document.getElementById("uName").value;
+            var enteredPass = document.getElementById("pWord").value;
+
+            // check if stored data from register-form is equal to data from login form
+            if("admin" !== enteredName || "admin" !== enteredPass) {
+                alert('Wront USERNAME or PASSWORD');
+            }
+        }
+
+
+    
+    </script>
+    
+    
+</body>
+
+</html>

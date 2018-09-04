@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Covering letter</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="user-scalable = yes">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+        <h1>Covering letter</h1>
+        <h3>Overview</h3>
+        <p>THE BACKEND OF THIS WEBSITE HAS SEVERAL SECTIONS, INEACH SECTION DIFFERENT TECHNIQUE AND TECHNOLOGY IS USED, THE HIGHLIGHT OF THE BACK END IS: <br> - LOGIN SESSION FOR THE BLOG OWNER WITH LOGOUT AND SESSION REMOVE SO THAT GOING BACK TO PREVIOUS PAGE IS BLOCKED<br> - DATA BASE CREATED AND DATA INSERTED, UPDATED OR CAN BE DELETED <br> - AUTOMATIC EMAIL SENDING <br> - LOADING BLOGS FOR THE VIEWRS FROM THE DATABASE <br> It is important to mention that all of technologies required for this project is used.</p>
+    
+        <h3>Creating the databse: (DATABASE DRIVEN PAGE)</h3>
+        <p>The "DBcreate.php" file creates a database and has the needed attributes for the blogger.</p>
+    
+        <h3>Login session:(PAGES WITH ACCESS CONTROL)</h3>
+        <p>The login session firstly checks the username and password, gives and error or will redirect the user to the setting page if the information is correct. <br> The default username and password are admin, admin. <br> If the user decide to logout from setting page, the session is destroyed and the user cannot go back in pages and will be redirected to the login page. <br> All of the following pages after this page is access controlled and the session is checked in every page.</p>
+    
+        <h3>Adding blog: (DATABASE DRIVEN PAGE,  Back-end pages to key in data into the database)</h3>
+        <p>The user can upload image, inser date and other information and save the data into the database from the Adding page. </p>
+        
+        <h3>Editing blog: (DATABASE DRIVEN PAGE,  Back-end pages to key in data into the database)</h3>
+        <p>The posted blogs are fetched from the database and the user can choose to edit the blog. The information of the selected blog is displayed in the form and the user can edit it and save. a global variable is used to pass the information about the selected blog. </p>
+        
+        <h3>Deleting blog: (DATABASE DRIVEN PAGE, Ajax, Back-end pages to key in data into the database)</h3>
+        <p>Ajax is used in this part to pass the information to another PHP file so that the query in that file can delete the selected blog.  </p>
+    
+        <h3>Display blog: (DATABASE DRIVEN PAGE)</h3>
+        <p> In the front end section (BLOG PAGE FOR THE VIEWERS), all of the blogs are gathered from the database and shown. there is a character limit for showing the text of the blog and the user can click on showmore to view all of the blog. </p>
+        
+        <h3>Email sending: (Use of technologies not covered in the lectures)</h3>
+        <p> In contact page of the frontend, the viewer can fill a form and send a message to the owner of the blog. This is done by sending automatic emails, one copy to the sender and one copy to the reciever.</p>
+    
+    
+</body>
+
+</html>

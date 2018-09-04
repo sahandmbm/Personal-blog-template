@@ -1,0 +1,29 @@
+body{
+    background-color: lavender;
+}
+h1{
+    text-align: center;
+    width: 50%;
+    border-bottom: 5px solid black;
+    margin: 50px 25%;
+    padding-bottom: 20px;
+    font-size: 3em;
+}
+h3{
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 5px solid darkred;
+    font-size: 2em;
+}
+p{
+    text-align: justify;
+    width: 70%;
+    margin: 50px 15%;
+    font-size: 1.5em;
+}
+ul{
+    text-align: justify;
+    width: 60%;
+    margin: 50px 15%;
+    font-size: 1.5em;
+}

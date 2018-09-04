@@ -1,0 +1,19 @@
+
+form {
+    width: 70%;
+    margin: 100px 15%;
+}
+
+.textAr {
+	max-height: 150px;
+    min-height: 150px;
+    overflow: auto;
+}
+
+.btn {
+    margin-top: 20px;
+}
+
+#date {
+    margin-top: 20px;
+}

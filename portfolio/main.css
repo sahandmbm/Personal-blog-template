@@ -1,0 +1,347 @@
+*{box-sizing:border-box}
+
+/* NAVIGATION */
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    -webkit-box-shadow: 0px 31px 88px -13px rgba(75,129,209,0.75);
+    -moz-box-shadow: 0px 31px 88px -13px rgba(75,129,209,0.75);
+    box-shadow: 0px 31px 88px -13px rgba(75,129,209,0.75);
+    background: rgba(0,65,115,0.75);
+    background: -moz-linear-gradient(left, rgba(0,65,115,0.75) 0%, rgba(22,120,145,0.63) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(0,65,115,0.75)), color-stop(100%, rgba(22,120,145,0.63)));
+    background: -webkit-linear-gradient(left, rgba(0,65,115,0.75) 0%, rgba(22,120,145,0.63) 100%);
+    background: -o-linear-gradient(left, rgba(0,65,115,0.75) 0%, rgba(22,120,145,0.63) 100%);
+    background: -ms-linear-gradient(left, rgba(0,65,115,0.75) 0%, rgba(22,120,145,0.63) 100%);
+    background: linear-gradient(to right, rgba(0,65,115,0.75) 0%, rgba(22,120,145,0.63) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#004173', endColorstr='#167891', GradientType=1 );
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 8px;
+    margin: 5px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    color: white;
+    text-align: center;
+    font-family: 'Cormorant Unicase', serif;    
+    border: 5px solid black;
+    border-radius: 25px;
+    background: rgba(0,0,0,.7);
+}
+#active {
+    border: 5px solid darkgoldenrod;
+	color:darkgoldenrod;
+    
+    background: none;
+}
+#close {
+	border: none;
+    font-size: 4em;
+    background: none;
+}
+#close:hover {
+    color: darkred;
+}
+.navlink:hover{
+        color: black;
+    border-bottom: 5px solid black;
+    text-decoration: none;
+    transition: .5s;
+    font-size: 2.5em;
+    background: rgba(250,250,250,.5);
+}
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+#openLogo {
+	border-bottom: 4px solid darkcyan;  
+    position: fixed;
+    top: 50%;
+}
+#openLogo:hover {
+	font-size: 2em;
+    color: white;
+    transition: .5s;
+}
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+    color: rgba(250,250,250,.5);
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+.wrapper {
+    text-align: center;
+    width: 100%;
+}
+
+.title {
+    font-size: 2em;
+    position: relative;
+    margin: 0 auto 1em;
+    padding: 1em 1em .25em 1em;
+    text-align: center;
+    text-transform: uppercase;
+}
+.title:after {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 240px;
+    height: 4px;
+    margin-left: -120px;
+    content: '';
+    background-color: #fff;
+}
+
+/* Clip text element */
+.clip-text {
+    font-size: 2.5em;
+    font-weight: bold;
+    line-height: 1;
+    position: relative;
+    display: inline-block;
+    margin: .25em;
+    padding: .5em .75em;
+    text-align: center;
+    /* Color fallback */
+    color: #fff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.clip-text:before,
+.clip-text:after {
+    position: absolute;
+    content: '';
+}
+
+/* Background */
+.clip-text:before {
+    z-index: -2;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: inherit;
+}
+
+/* Text Background (black zone) */
+.clip-text:after {
+    position: absolute;
+    z-index: -1;
+    top: .125em;
+    right: .125em;
+    bottom: .125em;
+    left: .125em;
+    background-color: #fff;
+}
+
+/* Change the background position to display letter when the black zone isn't here */
+.clip-text--no-textzone:before {
+    background-position: -.65em 0;
+}
+
+.clip-text--no-textzone:after {
+    content: none;
+}
+
+/* Use Background-size cover for photo background and no-repeat background */
+.clip-text--cover,
+.clip-text--cover:before {
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+            background-size: cover;
+  background-position: 50% 50%;
+}
+
+.clip-text_twelve {
+    background-image: url(1.gif);
+}
+
+
+/* THE SLIDE SHOW */
+
+#slideShowHead{
+    text-align: center;
+    font-family: "Nova Mono", cursive;
+    font-size: 3em;
+}
+
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 90%;
+  position: relative;
+  margin: auto;
+    border: 10px solid black;
+    background-image: url(5.gif);
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+    max-height: 250px;
+    overflow: hidden;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(250,250,250,0.4);
+    color: white;
+}
+
+/* Caption text */
+.text {
+  color: violet;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: violet;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: skyblue;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+
+/*IMAGE GALLERY*/
+#galleryHead {
+    padding-top: 100px;
+    text-align: center;
+    font-family: "Nova Mono", cursive;
+    font-size: 3.5em;
+    border-top: 5px solid black;
+    -webkit-box-shadow: 0px -39px 72px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px -39px 72px -4px rgba(0,0,0,0.75);
+    box-shadow: 0px -39px 72px -4px rgba(0,0,0,0.75);
+    color: rgba(250,250,250,.7);
+    text-shadow: 0px 0px 6px rgba(120,214,250,0.7);
+    
+}
+#glry {
+	background-image: url(6.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+    max-width: 95%;
+    border: 10px solid rgba(250,250,250,.7);
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+

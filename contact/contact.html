@@ -1,0 +1,241 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact me!</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="user-scalable = yes">
+    <meta name="description" content="DESCRIPTION">
+    <link rel="icon" href="../sahand.jpg">
+    <link href="https://fonts.googleapis.com/css?family=Cedarville+Cursive|El+Messiri|Josefin+Sans:400,600|Montserrat:100|Playball|Playfair+Display|Quicksand|VT323|Poiret+One|Great+Vibes|Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Unicase|Nova+Mono|Libre+Barcode+39" rel="stylesheet">
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+    
+    <!-- NAV -->
+
+    <div id="mySidenav" class="sidenav">
+      <a id="close" href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a class="navlink"  href="../index.html">About</a>
+      <a class="navlink" href="../portfolio/portfolio.html">Portfolio</a>
+      <a class="navlink" href="../blog/blog.php">Blog</a>
+      <a class="navlink" id="active">Contact</a>
+    </div>
+
+    <div id="main">
+      <span id="openLogo" style="font-size:30px;cursor:pointer;" onclick="openNav()">&#9776;</span>
+    </div>
+
+    
+    
+    
+    <!-- THE GIF -->
+    <div class="row">
+        <div class="col-md-12 theGif">
+            <h3>How to find me?</h3>
+            <p>EASTER EGG</p>
+        </div>
+    </div>
+    <!-- CONTACT -->
+    <div class="row">
+    
+        <div class="col-md-6">
+            <div id="map" ></div>
+        </div>
+    
+        <div class="col-md-6 fillForm">
+            <form action="SENDEMAIL.php" method="post">
+                <div class="row">
+                    <div class="col-md-12">
+                        <input class="formBox" type="text" id="fname" name="name" placeholder="Name">
+                    </div>
+                    
+                    <div class="col-md-12">
+                        <input class="formBox" type="text" id="eml" name="email" placeholder="E-mail">
+                    </div>
+                    
+                    <div class="col-md-12 ">
+                        <textarea class="formBox" id="subject" name="msg" placeholder="Message" style="height:170px"></textarea>
+                    </div>
+                    
+                    <div class="col-md-12">    
+                        <input id="subBtn" type="submit" value="Send">
+                    </div>
+                </div>
+            </form>
+            
+        </div>
+        
+    </div>
+    <!-- SOCIAL MEDIA -->
+    <div class="row">
+        <div class="col-md-3 col-sm-6 sm ln">
+            <a href="#">
+              <img class="socialImg" src="LN.png">
+              LinkedIn
+            </a>
+        </div>
+        
+        <div class="col-md-3 col-sm-6 sm ins" >
+            <a href="#">
+              <img class="socialImg" src="INSTA.png">
+              Instagram
+            </a>    
+        </div>
+        <div class="clearfix visible-xs"></div>
+        <div class="col-md-3 col-sm-6 sm fb">
+            <a href="#">
+              <img class="socialImg" src="FB.png">
+              Facebook
+            </a>
+        </div>
+        
+        <div class="col-md-3 col-sm-6 sm tw ">
+            <a href="#">
+              <img class="socialImg" src="TW.png">
+              Twitter
+            </a>
+        </div>
+    </div>
+
+    
+    
+
+    <!-- MAP -->
+    <script>
+      function initMap() {
+        var uluru = {lat: 51.5074, lng: -0.1278};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 7,
+          center: uluru,
+             styles: [
+            {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
+            {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
+            {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
+            {
+              featureType: 'administrative.locality',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#d59563'}]
+            },
+            {
+              featureType: 'poi',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#d59563'}]
+            },
+            {
+              featureType: 'poi.park',
+              elementType: 'geometry',
+              stylers: [{color: '#263c3f'}]
+            },
+            {
+              featureType: 'poi.park',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#6b9a76'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'geometry',
+              stylers: [{color: '#38414e'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'geometry.stroke',
+              stylers: [{color: '#212a37'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#9ca5b3'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'geometry',
+              stylers: [{color: '#746855'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'geometry.stroke',
+              stylers: [{color: '#1f2835'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#f3d19c'}]
+            },
+            {
+              featureType: 'transit',
+              elementType: 'geometry',
+              stylers: [{color: '#2f3948'}]
+            },
+            {
+              featureType: 'transit.station',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#d59563'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'geometry',
+              stylers: [{color: '#1f2a3b'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#515c6d'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'labels.text.stroke',
+              stylers: [{color: '#17263c'}]
+            }
+          ]
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map 
+        });
+          
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBI03XwL6nZXyqXiEBHyKfAniyslKR3imc&callback=initMap">
+    </script>
+
+    <!-- NAV OPEN CLOSE -->
+    <script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+        document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+        document.getElementById("openLogo").style.width = "0";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft= "0";
+        document.body.style.backgroundColor = "white";
+        document.getElementById("openLogo").style.width = "20px";
+    }
+    </script>
+
+    
+    
+    <!-- BOOTSTRAP -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+</body>
+
+    <script src="JAVASCRIPT/JavaScript.js"></script>
+
+</html>
